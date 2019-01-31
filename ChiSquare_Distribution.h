@@ -1,13 +1,9 @@
 /*
   File:         ChiSquare_Distribution.h
-  Version:      0.0.1
+  Version:      0.0.2
   Date:         27-Jan-2019
-  Revision:     27-Jan-2019
+  Revision:     31-Jan-2019
   Author:       Jerome Drouin (jerome.p.drouin@gmail.com)
-
-  Editions:
-  - 0.0.1	: First version
-  - 0.0.2	: -
 
   ChiSquare_Distribution.h - Library for 'duino
   https://github.com/newEndeavour/ChiSquare_Distribution
@@ -29,6 +25,10 @@
  
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+  Editions:
+  - 0.0.1	: First version
+  - 0.0.2	: Bug corrections. Replacement of double variables for double
 
 */
 
@@ -63,21 +63,20 @@ class ChiSquare_Distribution
   // user-accessible "public" interface
   public:
   // methods
-	ChiSquare_Distribution(float _Nu);
+	ChiSquare_Distribution(int _Nu);
 	
-	float 	GetPDF(float x);
-	float 	GetPDF_2(float x);
-	float 	GetCDF(float x);
-	float 	GetQuantile(float p);
+	double 	GetPDF(double x);
+	double 	GetCDF(double x);
+	double 	GetQuantile(double p);
 
-	float 	GetNu(void);
+	double 	GetNu(void);
 
   // library-accessible "private" interface
   private:
   // variables
 	int 	error;
 
-	float	Nu;			// 
+	int	Nu;			// 
 	
   // methods
 };
