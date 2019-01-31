@@ -69,6 +69,12 @@ class ChiSquare_Distribution
 	double 	GetCDF(double x);
 	double 	GetQuantile(double p);
 
+	double 	GetMean(void);
+	double 	GetVariance(void);
+	double 	GetStdDeviation(void);
+	double 	GetSkewness(void);
+	double 	GetKurtosis(void);
+
 	double 	GetNu(void);
 
   // library-accessible "private" interface

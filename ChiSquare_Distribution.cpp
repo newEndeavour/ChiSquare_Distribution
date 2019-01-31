@@ -83,6 +83,41 @@ double ChiSquare_Distribution::GetCDF(double x)
 }
 
 
+//Mean
+double ChiSquare_Distribution::GetMean(void)
+{
+	return Nu;
+}
+
+
+//Variance
+double ChiSquare_Distribution::GetVariance(void)
+{
+	return 2.0*Nu;
+}
+
+
+//Std Deviation
+double ChiSquare_Distribution::GetStdDeviation(void)
+{
+	return sqrt(2.0*Nu);
+}
+
+
+//Skewness
+double ChiSquare_Distribution::GetSkewness(void)
+{
+	return sqrt(8.0/Nu);
+}
+
+
+//Kurtosis
+double ChiSquare_Distribution::GetKurtosis(void)
+{
+	return 12.0/Nu;
+}
+
+
 //Return Quantile z(P) from probability P
 double ChiSquare_Distribution::GetQuantile(double p)
 {
