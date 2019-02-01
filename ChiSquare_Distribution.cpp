@@ -1,8 +1,8 @@
 /*
   File:         ChiSquare_Distribution.cpp
-  Version:      0.0.2
+  Version:      0.0.3
   Date:         27-Jan-2019
-  Revision:     31-Jan-2019
+  Revision:     01-Feb-2019
   Author:       Jerome Drouin (jerome.p.drouin@gmail.com)
 
   Editions:	Please go to ChiSquare_Distribution.h for Edition Notes.
@@ -116,6 +116,14 @@ double ChiSquare_Distribution::GetKurtosis(void)
 {
 	return 12.0/Nu;
 }
+
+
+//Entropy
+double ChiSquare_Distribution::GetEntropy(void)
+{
+	return 0.5*Nu + log(2.0*Gamma_Function(.5*Nu)) + (1-0.5*Nu) * DiGamma_Function(.5*Nu);
+}
+
 
 
 //Return Quantile z(P) from probability P

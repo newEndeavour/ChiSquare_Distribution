@@ -1,8 +1,8 @@
 /*
   File:         ChiSquare_Distribution.h
-  Version:      0.0.2
+  Version:      0.0.3
   Date:         27-Jan-2019
-  Revision:     31-Jan-2019
+  Revision:     01-Feb-2019
   Author:       Jerome Drouin (jerome.p.drouin@gmail.com)
 
   ChiSquare_Distribution.h - Library for 'duino
@@ -29,6 +29,7 @@
   Editions:
   - 0.0.1	: First version
   - 0.0.2	: Bug corrections. Replacement of double variables for double
+  - 0.0.3	: Entropy Added.
 
 */
 
@@ -74,6 +75,7 @@ class ChiSquare_Distribution
 	double 	GetStdDeviation(void);
 	double 	GetSkewness(void);
 	double 	GetKurtosis(void);
+	double 	GetEntropy(void);
 
 	double 	GetNu(void);
 
