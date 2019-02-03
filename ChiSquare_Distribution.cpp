@@ -86,6 +86,9 @@ double ChiSquare_Distribution::GetCDF(double x)
 //Mean
 double ChiSquare_Distribution::GetMean(void)
 {
+	//if error, return error
+	if (error<0) return error;
+
 	return Nu;
 }
 
@@ -93,6 +96,9 @@ double ChiSquare_Distribution::GetMean(void)
 //Variance
 double ChiSquare_Distribution::GetVariance(void)
 {
+	//if error, return error
+	if (error<0) return error;
+
 	return 2.0*Nu;
 }
 
@@ -100,6 +106,9 @@ double ChiSquare_Distribution::GetVariance(void)
 //Std Deviation
 double ChiSquare_Distribution::GetStdDeviation(void)
 {
+	//if error, return error
+	if (error<0) return error;
+
 	return sqrt(2.0*Nu);
 }
 
@@ -107,6 +116,9 @@ double ChiSquare_Distribution::GetStdDeviation(void)
 //Skewness
 double ChiSquare_Distribution::GetSkewness(void)
 {
+	//if error, return error
+	if (error<0) return error;
+
 	return sqrt(8.0/Nu);
 }
 
@@ -114,6 +126,9 @@ double ChiSquare_Distribution::GetSkewness(void)
 //Kurtosis
 double ChiSquare_Distribution::GetKurtosis(void)
 {
+	//if error, return error
+	if (error<0) return error;
+
 	return 12.0/Nu;
 }
 
@@ -121,6 +136,9 @@ double ChiSquare_Distribution::GetKurtosis(void)
 //Entropy
 double ChiSquare_Distribution::GetEntropy(void)
 {
+	//if error, return error
+	if (error<0) return error;
+
 	return 0.5*Nu + log(2.0*Gamma_Function(.5*Nu)) + (1-0.5*Nu) * DiGamma_Function(.5*Nu);
 }
 
