@@ -47,11 +47,6 @@
 
 
 //ChiSquare Constant Parameters
-#define CONSTANT_aa 0.2316419
-#define CONSTANT_b1 1.330274429#define CONSTANT_b2 1.821255978
-#define CONSTANT_b3 1.781477937
-#define CONSTANT_b4 0.356563782
-#define CONSTANT_b5 0.31938153
 #define CONSTANT_EpsStop 0.0000001
     
 //Number Pi
